@@ -8,7 +8,7 @@
 import Foundation
 
 enum FixerAPI {
-    case historicalConversion(date: String, currencyConversionData: Parameters)
+    case historicalConversion(date: String, currencyConversionData: EndpointParameter)
 }
 
 extension FixerAPI: EndPointType {
@@ -22,8 +22,8 @@ extension FixerAPI: EndPointType {
 
     var task: HTTPTask {
         switch self {
-        case .historicalConversion(_ , let data):
-            return.requestParameters(encoding: .urlEncoding, urlParameters: data)
+        case .historicalConversion(_ , let currencyConversionData):
+            return.requestParameters(encoding: .urlEncoding, urlParameters: currencyConversionData.asParameter)
         }
     }
 
