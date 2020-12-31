@@ -180,11 +180,8 @@
 		4F275C66259C1898005E8182 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				4F275C68259C1898005E8182 /* Router.swift */,
-				4F275C67259C1898005E8182 /* Environment.swift */,
-				4F275C97259C1B60005E8182 /* RequestBuilder.swift */,
-				4F275C8F259C19AA005E8182 /* NetworkRouter.swift */,
-				4F275C84259C1919005E8182 /* SessionManager.swift */,
+				4F275CEA259DDCA8005E8182 /* Session */,
+				4F275CE6259DDC95005E8182 /* Routing */,
 				4F275C69259C1898005E8182 /* Endpoint */,
 			);
 			path = Networking;
@@ -218,6 +215,25 @@
 				4F275C74259C1898005E8182 /* NetworkError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		4F275CE6259DDC95005E8182 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				4F275C68259C1898005E8182 /* Router.swift */,
+				4F275C97259C1B60005E8182 /* RequestBuilder.swift */,
+				4F275C8F259C19AA005E8182 /* NetworkRouter.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		4F275CEA259DDCA8005E8182 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				4F275C67259C1898005E8182 /* Environment.swift */,
+				4F275C84259C1919005E8182 /* SessionManager.swift */,
+			);
+			path = Session;
 			sourceTree = "<group>";
 		};
 		97F1F63D47F79B99D66EF65F /* Pods */ = {
