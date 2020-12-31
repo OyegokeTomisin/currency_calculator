@@ -26,9 +26,9 @@ final class RequestBuilder<EndPoint: EndPointType> {
         switch task {
         case .request:
             break
-        case .requestParameters(let bodyParameters, let bodyEncoding, let urlParameters, let additionHeaders):
+        case .requestParameters(let encoding, let bodyParameters, let urlParameters, let additionHeaders):
             addAdditionalHeaders(additionHeaders)
-            try configureParameters(with: bodyEncoding, bodyParameters: bodyParameters, urlParameters: urlParameters)
+            try configureParameters(with: encoding, bodyParameters: bodyParameters, urlParameters: urlParameters)
         }
     }
 
