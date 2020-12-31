@@ -9,13 +9,20 @@
 import Foundation
 
 enum Environment {
-    
+
     case dev
+
+    var FIXER_API_KEY: String {
+        switch self {
+        case .dev:
+            return "583da8c7a952ef1820a77964748c8956"
+        }
+    }
     
     var baseURL: String {
         switch self {
         case .dev:
-            return ""
+            return "http://data.fixer.io/api"
         }
     }
 }

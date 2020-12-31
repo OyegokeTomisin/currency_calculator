@@ -29,6 +29,10 @@
 		4F275C85259C1919005E8182 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F275C84259C1919005E8182 /* SessionManager.swift */; };
 		4F275C90259C19AA005E8182 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F275C8F259C19AA005E8182 /* NetworkRouter.swift */; };
 		4F275C98259C1B60005E8182 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F275C97259C1B60005E8182 /* RequestBuilder.swift */; };
+		4F275CEF259DDE5E005E8182 /* FixerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F275CEE259DDE5E005E8182 /* FixerAPI.swift */; };
+		4F275CF4259DE250005E8182 /* HistoricalConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F275CF3259DE250005E8182 /* HistoricalConversion.swift */; };
+		4F275CF9259DE556005E8182 /* FixerAPIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F275CF8259DE556005E8182 /* FixerAPIConstants.swift */; };
+		4F275CFE259DE5A3005E8182 /* EndpointParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F275CFD259DE5A3005E8182 /* EndpointParameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 		4F275C84259C1919005E8182 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		4F275C8F259C19AA005E8182 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		4F275C97259C1B60005E8182 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		4F275CEE259DDE5E005E8182 /* FixerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerAPI.swift; sourceTree = "<group>"; };
+		4F275CF3259DE250005E8182 /* HistoricalConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalConversion.swift; sourceTree = "<group>"; };
+		4F275CF8259DE556005E8182 /* FixerAPIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixerAPIConstants.swift; sourceTree = "<group>"; };
+		4F275CFD259DE5A3005E8182 /* EndpointParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointParameter.swift; sourceTree = "<group>"; };
 		6112A11E94A69EA95741CBE5 /* Pods-CurrencyCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCalculator.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyCalculator/Pods-CurrencyCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		7780C45263CFD80359A08C33 /* Pods_CurrencyCalculatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CurrencyCalculatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E7E00C19AA3F7E35D30F9C /* Pods-CurrencyCalculator-CurrencyCalculatorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CurrencyCalculator-CurrencyCalculatorUITests.debug.xcconfig"; path = "Target Support Files/Pods-CurrencyCalculator-CurrencyCalculatorUITests/Pods-CurrencyCalculator-CurrencyCalculatorUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +161,8 @@
 				4F275C36259C1487005E8182 /* Main.storyboard */,
 				4F275C39259C148A005E8182 /* Assets.xcassets */,
 				4F275C3B259C148A005E8182 /* LaunchScreen.storyboard */,
+				4F275CF3259DE250005E8182 /* HistoricalConversion.swift */,
+				4F275D02259DE5B9005E8182 /* API */,
 				4F275C66259C1898005E8182 /* Networking */,
 				4F275C3E259C148A005E8182 /* Info.plist */,
 			);
@@ -234,6 +244,24 @@
 				4F275C84259C1919005E8182 /* SessionManager.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		4F275D02259DE5B9005E8182 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4F275CFD259DE5A3005E8182 /* EndpointParameter.swift */,
+				4F275D06259DE601005E8182 /* Fixer */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4F275D06259DE601005E8182 /* Fixer */ = {
+			isa = PBXGroup;
+			children = (
+				4F275CEE259DDE5E005E8182 /* FixerAPI.swift */,
+				4F275CF8259DE556005E8182 /* FixerAPIConstants.swift */,
+			);
+			path = Fixer;
 			sourceTree = "<group>";
 		};
 		97F1F63D47F79B99D66EF65F /* Pods */ = {
@@ -491,15 +519,19 @@
 				4F275C7A259C1898005E8182 /* URLParameterEncoding.swift in Sources */,
 				4F275C79259C1898005E8182 /* ParameterEncoding.swift in Sources */,
 				4F275C90259C19AA005E8182 /* NetworkRouter.swift in Sources */,
+				4F275CF4259DE250005E8182 /* HistoricalConversion.swift in Sources */,
 				4F275C78259C1898005E8182 /* HTTPTask.swift in Sources */,
 				4F275C35259C1487005E8182 /* ViewController.swift in Sources */,
 				4F275C31259C1487005E8182 /* AppDelegate.swift in Sources */,
 				4F275C77259C1898005E8182 /* Router.swift in Sources */,
+				4F275CEF259DDE5E005E8182 /* FixerAPI.swift in Sources */,
 				4F275C85259C1919005E8182 /* SessionManager.swift in Sources */,
 				4F275C76259C1898005E8182 /* Environment.swift in Sources */,
 				4F275C7E259C1898005E8182 /* EndpointType.swift in Sources */,
 				4F275C7F259C1898005E8182 /* NetworkError.swift in Sources */,
 				4F275C7C259C1898005E8182 /* HTTPMethod.swift in Sources */,
+				4F275CF9259DE556005E8182 /* FixerAPIConstants.swift in Sources */,
+				4F275CFE259DE5A3005E8182 /* EndpointParameter.swift in Sources */,
 				4F275C7B259C1898005E8182 /* JSONParameterEncoding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
